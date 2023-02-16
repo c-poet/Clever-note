@@ -1,5 +1,0 @@
-server:
-  port: 9898
-spring:
-  application:
-    name: clever-standalone-server
