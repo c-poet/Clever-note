@@ -4,8 +4,8 @@
 // Date: 2022/10/26
 
 #include "inc/theme_item.h"
-#include "cpoet/core/inc/log.h"
-#include "cpoet/theme/inc/css/css.h"
+#include "common/core/inc/log.h"
+#include "common/theme/inc/css/css.h"
 
 ThemeItem::ThemeItem() {
     this->loaded = false;

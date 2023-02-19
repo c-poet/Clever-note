@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#include "cpoet/core/inc/core.h"
-#include "cpoet/theme/inc/css/css.h"
+#include "common/core/inc/core.h"
+#include "common/theme/inc/css/css.h"
 #include "inc/constant.h"
 #include "inc/theme.h"
 

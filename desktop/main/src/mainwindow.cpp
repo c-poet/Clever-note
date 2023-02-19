@@ -8,7 +8,7 @@
 #include <QSplitter>
 #include <QListWidget>
 #include <QTreeWidget>
-#include "cpoet/core/inc/core.h"
+#include "common/core/inc/core.h"
 #include "desktop/theme/inc/constant.h"
 #include "desktop/theme/inc/theme.h"
 

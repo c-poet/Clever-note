@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 # 语言支持C++
-project(Clever-note-desktop VERSION 1.0.0 LANGUAGES CXX)
+project(Clever-note LANGUAGES CXX)
 
 # 开启单元测试
 enable_testing()
@@ -40,23 +40,16 @@ else ()
 endif ()
 
 # 常用目录
-set(NOTE_C_POET_PATH ${PROJECT_SOURCE_DIR}/cpoet)
+set(NOTE_C_POET_PATH ${PROJECT_SOURCE_DIR}/common)
 set(NOTE_DESKTOP_PATH ${PROJECT_SOURCE_DIR}/desktop)
 set(NOTE_THEME_PATH ${PROJECT_SOURCE_DIR}/theme)
 set(NOTE_PLUGIN_PATH ${PROJECT_SOURCE_DIR}/plugin)
 set(NOTE_LIB_PATH ${PROJECT_SOURCE_DIR}/lib)
 set(NOTE_LANG_PATH ${PROJECT_SOURCE_DIR}/lang)
 
-# 国际化配置，支持语言文件
-# 各执行模块使用 qt5_create_translation 引用
-set(TS_FILE_LIST
-        ${NOTE_LANG_PATH}/zh_CN.ts
-        ${NOTE_LANG_PATH}/zh_TW.ts)
-
-
 # 搜索QT组件及包
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools Sql REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools Sql REQUIRED)
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 # 递归扫描所有头文件
 function(list_include_file resultVar rootPath)
@@ -136,7 +129,8 @@ file(COPY ${targetTheme} DESTINATION ${THEME_OUTPUT_PATH})
 include_directories(${PROJECT_SOURCE_DIR})
 
 # 添加子目录
-add_subdirectory(cpoet)
-add_subdirectory(desktop)
+add_subdirectory(common)
 add_subdirectory(plugin)
 add_subdirectory(lib)
+add_subdirectory(desktop)
+add_subdirectory(mobile)

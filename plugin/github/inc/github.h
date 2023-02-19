@@ -2,7 +2,7 @@
 #define PLUGIN_GITHUB_H
 
 #include "core.h"
-#include "cpoet/plugin/inc/plugin_meta.h"
+#include "common/plugin/inc/plugin_meta.h"
 
 extern "C" {
 /// @brief 入口函数，获取插件信息
