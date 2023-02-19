@@ -1,5 +1,5 @@
 list_include_file(INC_FILE_LIST "${CMAKE_CURRENT_SOURCE_DIR}/inc")
 list_source_file(SRC_FILE_LIST "${CMAKE_CURRENT_SOURCE_DIR}/src")
 add_executable(Clever-note-desktop ${INC_FILE_LIST} ${SRC_FILE_LIST})
-target_link_libraries(Clever-note-desktop PRIVATE c_poet_plugin theme editor richtext)
+target_link_libraries(Clever-note-desktop PUBLIC plugin desktop_theme desktop_richtext)
 add_subdirectory(test)

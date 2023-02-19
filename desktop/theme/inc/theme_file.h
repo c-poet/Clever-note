@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef THEME_FILE_H
-#define THEME_FILE_H
+#ifndef _CD_THEME_FILE_H
+#define _CD_THEME_FILE_H
 
 class ThemeItem;
 

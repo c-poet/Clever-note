@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef C_POET_PLUGIN_FUNCTION
-#define C_POET_PLUGIN_FUNCTION
+#ifndef _CC_PLUGIN_FUNCTION_H
+#define _CC_PLUGIN_FUNCTION_H
 
 #include "plugin_meta.h"
 #include "plugin_context.h"

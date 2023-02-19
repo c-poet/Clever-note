@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef C_POET_EXCEPTION_H
-#define C_POET_EXCEPTION_H
+#ifndef _CC_CORE_EXCEPTION_H
+#define _CC_CORE_EXCEPTION_H
 
 #include <QString>
 #include <QException>

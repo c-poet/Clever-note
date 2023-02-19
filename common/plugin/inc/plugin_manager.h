@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef C_POET_PLUGIN_MANAGER_H
-#define C_POET_PLUGIN_MANAGER_H
+#ifndef _CC_PLUGIN_MANAGER_H
+#define _CC_PLUGIN_MANAGER_H
 
 #include "plugin.h"
 #include <QMap>

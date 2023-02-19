@@ -1,4 +1,4 @@
 add_subdirectory(core)
 add_subdirectory(plugin)
 add_subdirectory(theme)
-add_subdirectory(zlib)
+add_subdirectory(zip)

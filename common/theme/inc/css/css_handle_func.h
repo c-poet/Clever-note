@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef C_POET_CSS_HANDLE_FUNC_H
-#define C_POET_CSS_HANDLE_FUNC_H
+#ifndef _CC_THEME_CSS_HANDLE_FUNC_H
+#define _CC_THEME_CSS_HANDLE_FUNC_H
 
 #include <QString>
 

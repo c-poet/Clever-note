@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef THEME_ITEM_H
-#define THEME_ITEM_H
+#ifndef _CD_THEME_ITEM_H
+#define _CD_THEME_ITEM_H
 
 #include <QMap>
 #include "theme_file.h"

@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef CONSTANT_H
-#define CONSTANT_H
+#ifndef _CD_THEME_CONSTANT_H
+#define _CD_THEME_CONSTANT_H
 
 // 全局CSS-Key，用于未指定Css-Key的情况
 // 应用初始化时加载到顶级Window

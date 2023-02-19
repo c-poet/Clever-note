@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef CONSTANT_H
-#define CONSTANT_H
+#ifndef _CC_CORE_CONSTANT_H
+#define _CC_CORE_CONSTANT_H
 
 // QT统一文件分隔符（统一采用/作为分隔符）
 #define PATH_SEPARATOR "/"

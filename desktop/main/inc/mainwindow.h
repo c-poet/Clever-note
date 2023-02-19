@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef _CD_MAIN_MAINWINDOW_H
+#define _CD_MAIN_MAINWINDOW_H
 
 #include <QMainWindow>
 #include "desktop/richtext/inc/richtext.h"

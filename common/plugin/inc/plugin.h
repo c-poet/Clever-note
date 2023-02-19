@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef C_POET_PLUGIN_H
-#define C_POET_PLUGIN_H
+#ifndef _CC_PLUGIN_H
+#define _CC_PLUGIN_H
 
 #include <QLibrary>
 #include "plugin_meta.h"

@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef RICH_TEXT_H
-#define RICH_TEXT_H
+#ifndef _CD_RICH_TEXT_H
+#define _CD_RICH_TEXT_H
 
 #include "desktop/editor/inc/editor.h"
 

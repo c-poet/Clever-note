@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef C_POET_CSS_PARSE_H
-#define C_POET_CSS_PARSE_H
+#ifndef _CC_THEME_CSS_PARSE_H
+#define _CC_THEME_CSS_PARSE_H
 
 #include <QFile>
 

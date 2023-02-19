@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef  EDITOR_H
-#define EDITOR_H
+#ifndef _CD_EDITOR_H
+#define _CD_EDITOR_H
 
 #include <QTextEdit>
 
@@ -17,7 +17,7 @@ enum class EditorType {
 };
 
 class Editor : public QTextEdit {
-Q_OBJECT
+    Q_OBJECT
 public:
     explicit Editor(QWidget *parent = nullptr);
 
