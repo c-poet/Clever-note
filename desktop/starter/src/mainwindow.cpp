@@ -15,14 +15,14 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // 隐藏默认的标题栏
 //    this->setWindowFlags(Qt::FramelessWindowHint);
-    
+
 #ifdef Q_OS_MACOS
     // 如果是Macos的情况下，将注册菜单栏
 #endif
 
     auto *theme = new Theme();
     theme->load(THEME_DEFAULT_NAME);
-    this->setWindowTitle(tr("Clever"));
+    this->setWindowTitle("Clever Note");
     this->setMinimumWidth(820);
     this->setMinimumHeight(600);
 
@@ -31,12 +31,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     shapeToolBar->setMovable(false);
     // shapeToolBar->addAction("头像");
     // shapeToolBar->addSeparator();
-    shapeToolBar->addAction(tr("Todo"));
-    shapeToolBar->addAction(tr("Notebook"));
-    shapeToolBar->addAction(tr("Calendar"));
-    shapeToolBar->addAction(tr("Recycle"));
-    shapeToolBar->addAction(tr("Setting"));
-    this->addToolBar(Qt::LeftToolBarArea, shapeToolBar);
+    shapeToolBar->addAction("Todo");
+    shapeToolBar->addAction("Notebook");
+    shapeToolBar->addAction("Calendar");
+    shapeToolBar->addAction("Recycle");
+    shapeToolBar->addAction("Setting");
+//    this->addToolBar(Qt::LeftToolBarArea, shapeToolBar);
 
     // 右
     auto *splitter = new QSplitter(Qt::Horizontal, this);
@@ -57,7 +57,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // 学习笔记
     auto *item3 = new QTreeWidgetItem(treeWidget);
     item3->setText(0, "学习笔记");
-    splitter->addWidget(treeWidget);
+//    splitter->addWidget(treeWidget);
 
 //    auto *listWidget = new QListWidget(this);
 //    listWidget->setMinimumWidth(10);
