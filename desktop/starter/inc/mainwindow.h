@@ -3,24 +3,25 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef _CD_MAIN_MAINWINDOW_H
-#define _CD_MAIN_MAINWINDOW_H
+#ifndef _CD_STARTER_MAINWINDOW_H
+#define _CD_STARTER_MAINWINDOW_H
 
 #include <QMainWindow>
 #include "desktop/richtext/inc/richtext.h"
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+class MainWindow : public QMainWindow {
+Q_OBJECT
 
 private:
     ///
     /// \brief 编辑器
     ///
-    Editor* editor;
+    Editor *editor;
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
+
     ~MainWindow() override;
 };
-#endif // MAINWINDOW_H
+
+#endif
