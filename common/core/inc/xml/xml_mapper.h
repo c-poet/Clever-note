@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef _CC_CORE_XML_MAPPER_H
-#define _CC_CORE_XML_MAPPER_H
+#ifndef CC_CORE_XML_MAPPER_H
+#define CC_CORE_XML_MAPPER_H
 
 #include <QMap>
 #include <QList>

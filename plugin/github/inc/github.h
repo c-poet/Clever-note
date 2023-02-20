@@ -1,5 +1,5 @@
-#ifndef PLUGIN_GITHUB_H
-#define PLUGIN_GITHUB_H
+#ifndef CP_GITHUB_H
+#define CP_GITHUB_H
 
 #include "core.h"
 #include "common/plugin/inc/plugin_meta.h"

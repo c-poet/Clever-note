@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef _CC_PLUGIN_FACTORY_H
-#define _CC_PLUGIN_FACTORY_H
+#ifndef CC_PLUGIN_FACTORY_H
+#define CC_PLUGIN_FACTORY_H
 
 #include "plugin.h"
 

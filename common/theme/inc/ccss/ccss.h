@@ -3,7 +3,7 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef  _CC_THEME_CCSS_H
-#define  _CC_THEME_CCSS_H
+#ifndef  CC_THEME_CCSS_H
+#define  CC_THEME_CCSS_H
 
 #endif

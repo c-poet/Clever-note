@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef _CC_CORE_XML_PARSER_H
-#define _CC_CORE_XML_PARSER_H
+#ifndef CC_CORE_XML_PARSER_H
+#define CC_CORE_XML_PARSER_H
 
 #include "xml_mapper.h"
 

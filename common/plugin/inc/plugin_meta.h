@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef _CC_PLUGIN_META_H
-#define _CC_PLUGIN_META_H
+#ifndef CC_PLUGIN_META_H
+#define CC_PLUGIN_META_H
 
 /// @brief 插件信息
 struct PluginInfo {
