@@ -8,14 +8,16 @@
 
 #include <QMainWindow>
 
-class MainWindow : public QMainWindow {
-Q_OBJECT
+namespace cd {
+    class MainWindow : public QMainWindow {
+    Q_OBJECT
 
-private:
-public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    private:
+    public:
+        explicit MainWindow(QWidget *parent = nullptr);
 
-    ~MainWindow() override;
-};
+        ~MainWindow() override;
+    };
+}
 
 #endif
