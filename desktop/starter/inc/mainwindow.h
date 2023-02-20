@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef _CD_STARTER_MAINWINDOW_H
-#define _CD_STARTER_MAINWINDOW_H
+#ifndef _CD_STARTER_MAIN_WINDOW_H
+#define _CD_STARTER_MAIN_WINDOW_H
 
 #include <QMainWindow>
 #include "desktop/richtext/inc/richtext.h"
@@ -13,11 +13,6 @@ class MainWindow : public QMainWindow {
 Q_OBJECT
 
 private:
-    ///
-    /// \brief 编辑器
-    ///
-    Editor *editor;
-
 public:
     explicit MainWindow(QWidget *parent = nullptr);
 

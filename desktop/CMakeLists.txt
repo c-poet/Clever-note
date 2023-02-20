@@ -1,4 +1,2 @@
-add_subdirectory(editor)
-add_subdirectory(richtext)
 add_subdirectory(theme)
 add_subdirectory(starter)
