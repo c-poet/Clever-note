@@ -1,0 +1,4 @@
+#ifndef CC_LOGGER_LOG_CONTEXT_H
+#define CC_LOGGER_LOG_CONTEXT_H
+
+#endif
