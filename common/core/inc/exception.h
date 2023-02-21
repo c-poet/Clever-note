@@ -3,8 +3,8 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef _CC_CORE_EXCEPTION_H
-#define _CC_CORE_EXCEPTION_H
+#ifndef CC_CORE_EXCEPTION_H
+#define CC_CORE_EXCEPTION_H
 
 #include <QString>
 #include <QException>

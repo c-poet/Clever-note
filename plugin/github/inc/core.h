@@ -1,5 +1,5 @@
-#ifndef _CP_GITHUB_CORE_H
-#define _CP_GITHUB_CORE_H
+#ifndef CP_GITHUB_CORE_H
+#define CP_GITHUB_CORE_H
 
 // GNU
 #ifdef __GNUC__

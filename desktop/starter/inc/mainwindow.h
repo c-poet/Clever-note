@@ -3,20 +3,21 @@
 // Author: CPoet
 // Date: 2022/10/26
 
-#ifndef _CD_STARTER_MAIN_WINDOW_H
-#define _CD_STARTER_MAIN_WINDOW_H
+#ifndef CD_STARTER_MAIN_WINDOW_H
+#define CD_STARTER_MAIN_WINDOW_H
 
 #include <QMainWindow>
-#include "desktop/richtext/inc/richtext.h"
 
-class MainWindow : public QMainWindow {
-Q_OBJECT
+namespace cd {
+    class MainWindow : public QMainWindow {
+    Q_OBJECT
 
-private:
-public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    private:
+    public:
+        explicit MainWindow(QWidget *parent = nullptr);
 
-    ~MainWindow() override;
-};
+        ~MainWindow() override;
+    };
+}
 
 #endif

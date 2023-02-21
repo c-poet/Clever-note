@@ -9,12 +9,13 @@
 #include <QListWidget>
 #include "common/core/inc/core.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+cd::MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     this->setWindowTitle("Clever Note");
     this->setMinimumWidth(800);
     this->setMinimumHeight(480);
     QTextEdit *edit = new QTextEdit(this);
     this->setCentralWidget(edit);
+
 
     QTextDocument *doc = edit->document();
     connect(doc, &QTextDocument::blockCountChanged, [](int count) {
@@ -34,4 +35,4 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     });
 }
 
-MainWindow::~MainWindow() = default;
+cd::MainWindow::~MainWindow() = default;
