@@ -1,4 +1,6 @@
 #include "inc/logger.h"
+#include <QString>
+#include <iostream>
 
 using namespace cc;
 
@@ -11,14 +13,16 @@ LogLevel Logger::getLevel() {
 }
 
 Logger &Logger::operator<<(char c) {
-
+    std::cout << c;
     return *this;
 }
 
 Logger &Logger::operator<<(const char *c) {
+    std::cout << c;
     return *this;
 }
 
 Logger &Logger::operator<<(const QString &str) {
+    std::cout << str.toStdString();
     return *this;
 }

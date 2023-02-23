@@ -6,6 +6,7 @@
 class QString;
 
 namespace cc {
+
     /// 日志
     class Logger {
     private:
