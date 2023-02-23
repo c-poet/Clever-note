@@ -4,7 +4,7 @@
 using namespace cc;
 
 /// 日志工厂测试
-void loggerFactoryTest() {
+void logTest() {
     LoggerFactory factory = LoggerFactory::getInstance();
     Logger debug = factory.getLogger(LogLevel::Debug);
     debug << "Hello World" << "12345678";
@@ -14,6 +14,6 @@ void loggerFactoryTest() {
 }
 
 int main(int argc, char *argv[]) {
-    loggerFactoryTest();
+    logTest();
     return 0;
 }
