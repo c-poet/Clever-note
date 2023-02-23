@@ -6,10 +6,12 @@
 #include <QString>
 #include <QMap>
 #include <QFileInfo>
-#include "common/core/inc/log.h"
+#include "common/logger/inc/log.h"
 #include "contrib/minizip/unzip.h"
 
 #define THEME_FILE_NAME "default.theme.clr"
+
+using namespace cc;
 
 int main(int argc, char *argv[]) {
     QString path = QFileInfo(__FILE__).absolutePath() + "/../../../theme/" + THEME_FILE_NAME;
@@ -29,9 +31,9 @@ int main(int argc, char *argv[]) {
             unzGetCurrentFileInfo(file, &unzFileInfo, fileName, 120, extField, 120, comment, 120);
             QString fName = QString(fileName);
             if (fName.endsWith("/")) {
-                qDebug() << "目录：" << fName;
+                Log::debug() << "目录：" << fName;
             } else {
-                qDebug() << "文件：" << fName;
+                Log::debug() << "文件：" << fName;
                 if (unzOpenCurrentFile(file) == UNZ_OK) {
                     byteArray = new QByteArray();
                     while ((len = unzReadCurrentFile(file, buf, 1024)) > 0) {
@@ -40,7 +42,7 @@ int main(int argc, char *argv[]) {
                     unzCloseCurrentFile(file);
                     (*map)[fName] = byteArray;
                 } else {
-                    qDebug() << "打开文件失败：" << fName;
+                    Log::debug() << "打开文件失败：" << fName;
                 }
             }
         } while (unzGoToNextFile(file) == UNZ_OK);
@@ -55,14 +57,14 @@ int main(int argc, char *argv[]) {
         if (!map->isEmpty()) {
             QList<QString> keys = map->keys();
             for (const auto &key : keys) {
-                qDebug() << "key:" << key;
-                qDebug() << "内容：" << QString::fromUtf8(*(*map)[key]);
+                Log::debug() << "key:" << key;
+                Log::debug() << "内容：" << QString::fromUtf8(*(*map)[key]);
                 delete (*map)[key];
             }
         }
         delete map;
     } else {
-        qDebug() << "文件打开失败";
+        Log::debug() << "文件打开失败";
     }
     return 0;
 }

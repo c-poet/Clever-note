@@ -1,15 +1,16 @@
-#include "inc/logger.h"
 #include <QString>
-#include <iostream>
+#include "inc/logger.h"
+#include "inc/log_adapter.h"
+#include "inc/log_context.h"
 
 using namespace cc;
 
 bool Logger::isEnabled() {
-    return false;
+    return _level >= LogContext::level();
 }
 
 LogLevel Logger::getLevel() {
-    return level;
+    return _level;
 }
 
 Logger &Logger::operator<<(bool b) {
@@ -33,16 +34,14 @@ Logger &Logger::operator<<(double d) {
 }
 
 Logger &Logger::operator<<(char c) {
-    std::cout << c;
     return *this;
 }
 
 Logger &Logger::operator<<(const char *c) {
-    std::cout << c;
+    LogContext::adapter().handle(c);
     return *this;
 }
 
 Logger &Logger::operator<<(const QString &str) {
-    std::cout << str.toStdString();
     return *this;
 }

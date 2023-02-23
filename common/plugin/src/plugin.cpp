@@ -4,10 +4,12 @@
 // Date: 2022/10/26
 
 #include "inc/plugin.h"
-#include "common/core/inc/log.h"
 #include "inc/plugin_function.h"
+#include "common/logger/inc/log.h"
 #include "inc/plugin_func_symbol.h"
 #include "common/core/inc/exception.h"
+
+using namespace cc;
 
 Plugin::Plugin(const QString &file) {
     this->libFile = file;
@@ -33,7 +35,7 @@ void Plugin::load() noexcept(false) {
     }
     if (!this->library->isLoaded()) {
         if (!this->library->load()) {
-            qWarning() << "插件加载失败：" << this->library->errorString();
+            Log::warn() << "插件加载失败：" << this->library->errorString();
             throw Exception(this->library->errorString());
         }
     }
@@ -45,10 +47,10 @@ void Plugin::load() noexcept(false) {
     if (pluginInfo == nullptr) {
         throw Exception("插件返回的元信息为空: " + this->library->fileName());
     }
-    qDebug() << pluginInfo->id;
-    qDebug() << pluginInfo->name;
-    qDebug() << pluginInfo->author;
-    qDebug() << pluginInfo->description;
+    Log::debug() << pluginInfo->id;
+    Log::debug() << pluginInfo->name;
+    Log::debug() << pluginInfo->author;
+    Log::debug() << pluginInfo->description;
 }
 
 void Plugin::reload() noexcept(false) {

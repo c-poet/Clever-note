@@ -1,9 +1,10 @@
 #ifndef CC_LOGGER_FACTORY_H
 #define CC_LOGGER_FACTORY_H
 
-#include "log_level.h"
-
 namespace cc {
+    /// 日志级别
+    enum class LogLevel;
+
     /// 日志类
     class Logger;
 

@@ -6,8 +6,7 @@
 #ifndef CC_CORE_H
 #define CC_CORE_H
 
-#include "log.h"
-#include <QString>
+class QString;
 
 /// @brief 获取当前执行程序所在路径
 /// @return 执行程序所在根路径

@@ -1,4 +1,5 @@
 #include "common/logger/inc/logger.h"
+#include "common/logger/inc/log_level.h"
 #include "common/logger/inc/logger_factory.h"
 
 using namespace cc;

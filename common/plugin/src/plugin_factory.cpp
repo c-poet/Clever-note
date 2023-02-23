@@ -4,7 +4,6 @@
 // Date: 2022/10/26
 
 #include "inc/plugin_factory.h"
-#include "common/core/inc/log.h"
 #include "common/core/inc/exception.h"
 
 Plugin *PluginFactory::load(QLibrary *library) noexcept(false) {

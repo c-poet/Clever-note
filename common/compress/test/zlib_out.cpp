@@ -8,8 +8,10 @@
 #include <QFile>
 #include <QDir>
 #include <QDateTime>
-#include "common/core/inc/log.h"
 #include "contrib/minizip/zip.h"
+#include "common/logger/inc/log.h"
+
+using  namespace cc;
 
 void write2zip(zipFile file, const QFileInfo &fileInfo, const QString &dirName = QString()) {
     if (fileInfo.isFile()) {
@@ -21,18 +23,18 @@ void write2zip(zipFile file, const QFileInfo &fileInfo, const QString &dirName =
             QByteArray byteArray = f.readAll();
             zipWriteInFileInZip(file, byteArray.toStdString().c_str(), byteArray.size());
         } else {
-            qDebug() << "读取文件失败：" << fileInfo.fileName();
+            Log::debug() << "读取文件失败：" << fileInfo.fileName();
         }
         zipCloseFileInZip(file);
     } else if (fileInfo.isDir()) {
         QDir dir = fileInfo.dir();
         QFileInfoList fileInfoList = dir.entryInfoList();
         for (const auto &item : fileInfoList) {
-            qDebug() << item.fileName();
+            Log::debug() << item.fileName();
             write2zip(file, item, fileInfo.fileName());
         }
     } else {
-        qDebug() << "错误的文件类型:" << fileInfo.filePath();
+        Log::debug() << "错误的文件类型:" << fileInfo.filePath();
     }
 }
 
@@ -45,7 +47,7 @@ int main(int argc, char *argv[]) {
         write2zip(file, fileInfo);
         zipClose(file, "llzero54@foxmail.com");
     } else {
-        qDebug() << "文件打开失败";
+        Log::debug() << "文件打开失败";
     }
     return 0;
 }

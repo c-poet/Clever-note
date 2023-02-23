@@ -1,8 +1,7 @@
 add_executable(library_load_test library_load.cpp)
-target_link_libraries(library_load_test PRIVATE c_poet_core)
-
+target_link_libraries(library_load_test PUBLIC core)
 add_test(NAME library_load_test COMMAND library_load_test)
 
 add_executable(plugin_factory_test plugin_factory.cpp)
-target_link_libraries(plugin_factory_test PRIVATE c_poet_plugin)
+target_link_libraries(plugin_factory_test PUBLIC  plugin)
 add_test(NAME plugin_factory_test COMMAND plugin_factory_test)
