@@ -12,6 +12,26 @@ LogLevel Logger::getLevel() {
     return level;
 }
 
+Logger &Logger::operator<<(bool b) {
+    return *this;
+}
+
+Logger &Logger::operator<<(int i) {
+    return *this;
+}
+
+Logger &Logger::operator<<(long l) {
+    return *this;
+}
+
+Logger &Logger::operator<<(float f) {
+    return *this;
+}
+
+Logger &Logger::operator<<(double d) {
+    return *this;
+}
+
 Logger &Logger::operator<<(char c) {
     std::cout << c;
     return *this;

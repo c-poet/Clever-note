@@ -22,6 +22,16 @@ namespace cc {
         /// @return 当前日志等级
         LogLevel getLevel();
 
+        Logger &operator<<(bool b);
+
+        Logger &operator<<(int i);
+
+        Logger &operator<<(long l);
+
+        Logger &operator<<(float f);
+
+        Logger &operator<<(double d);
+
         Logger &operator<<(char c);
 
         Logger &operator<<(const char *c);
