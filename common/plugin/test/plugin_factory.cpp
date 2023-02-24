@@ -19,9 +19,9 @@ int main(int argc, char *argv[]) {
 #endif
     try {
         auto plugin = PluginFactory::load(dllFile);
-        Log::debug() << "插件加载成功";
+        debug() << "插件加载成功";
         delete plugin;
     } catch (Exception &e) {
-        Log::debug() << "插件加载失败：" << e.getMessage();
+        debug() << "插件加载失败：" << e.getMessage();
     }
 }

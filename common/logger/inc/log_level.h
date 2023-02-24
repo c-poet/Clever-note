@@ -10,8 +10,8 @@ namespace cc {
         /// Info级别
         Info,
 
-        /// Wain警告级别
-        Wain,
+        /// Warn警告级别
+        Warn,
 
         /// Error错误级别
         Error

@@ -23,18 +23,18 @@ void write2zip(zipFile file, const QFileInfo &fileInfo, const QString &dirName =
             QByteArray byteArray = f.readAll();
             zipWriteInFileInZip(file, byteArray.toStdString().c_str(), byteArray.size());
         } else {
-            Log::debug() << "读取文件失败：" << fileInfo.fileName();
+            debug() << "读取文件失败：" << fileInfo.fileName();
         }
         zipCloseFileInZip(file);
     } else if (fileInfo.isDir()) {
         QDir dir = fileInfo.dir();
         QFileInfoList fileInfoList = dir.entryInfoList();
         for (const auto &item : fileInfoList) {
-            Log::debug() << item.fileName();
+            debug() << item.fileName();
             write2zip(file, item, fileInfo.fileName());
         }
     } else {
-        Log::debug() << "错误的文件类型:" << fileInfo.filePath();
+        debug() << "错误的文件类型:" << fileInfo.filePath();
     }
 }
 
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
         write2zip(file, fileInfo);
         zipClose(file, "llzero54@foxmail.com");
     } else {
-        Log::debug() << "文件打开失败";
+        debug() << "文件打开失败";
     }
     return 0;
 }

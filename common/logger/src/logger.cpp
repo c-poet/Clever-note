@@ -5,6 +5,14 @@
 
 using namespace cc;
 
+Logger::Logger(LogLevel level) {
+    this->_level = level;
+}
+
+LogLevel Logger::level() {
+    return this->_level;
+}
+
 Logger &Logger::operator<<(bool b) {
     return *this;
 }

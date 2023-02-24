@@ -35,7 +35,7 @@ void Plugin::load() noexcept(false) {
     }
     if (!this->library->isLoaded()) {
         if (!this->library->load()) {
-            Log::warn() << "插件加载失败：" << this->library->errorString();
+            warn() << "插件加载失败：" << this->library->errorString();
             throw Exception(this->library->errorString());
         }
     }
@@ -47,10 +47,10 @@ void Plugin::load() noexcept(false) {
     if (pluginInfo == nullptr) {
         throw Exception("插件返回的元信息为空: " + this->library->fileName());
     }
-    Log::debug() << pluginInfo->id;
-    Log::debug() << pluginInfo->name;
-    Log::debug() << pluginInfo->author;
-    Log::debug() << pluginInfo->description;
+    debug() << pluginInfo->id;
+    debug() << pluginInfo->name;
+    debug() << pluginInfo->author;
+    debug() << pluginInfo->description;
 }
 
 void Plugin::reload() noexcept(false) {

@@ -10,7 +10,29 @@ namespace cc {
 
     /// 日志对象工厂
     class LoggerFactory {
+    private:
+        /// 日志对象工厂实例，全局唯一
+        static LoggerFactory INSTANCE;
+
+        /// debug日志实例
+        Logger *debug;
+        /// info日志实例
+        Logger *info;
+        /// warn日志实例
+        Logger *warn;
+        /// error日志实例
+        Logger *error;
+
+        /// 校验及获取日志实例
+        /// @param level 日志等级
+        /// @return 日志对象实例
+        Logger &getAndCheckLogger(LogLevel level);
+
     public:
+        /// 获取日志工厂实例
+        /// @return 日志工厂实例
+        static LoggerFactory &getInstance();
+
         /// 获取日志对象实例
         /// @param level 日志等级
         /// @return 日志对象实例

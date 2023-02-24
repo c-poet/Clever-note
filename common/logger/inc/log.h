@@ -2,51 +2,32 @@
 #define CC_LOGGER_LOG_H
 
 #include "logger.h"
+#include "log_level.h"
+#include "logger_factory.h"
+
+#ifndef __FILE__
+#define __FILE__ ""
+#endif
+
+#ifndef __FUNCTION__
+#define __FUNCTION__ ""
+#endif
+
+#ifndef __LINE__
+#define __LINE__ -1
+#endif
 
 namespace cc {
-    // 对外日志类
-    class Log {
-    public:
-        /// 判断是否开启debug日志
-        /// @return 是否开启debug日志
-        inline static bool isDebugEnabled() {
-            return debug().isEnabled();
-        };
+/// debug日志
+#define debug() (cc::LoggerFactory::getLogger(cc::LogLevel::Debug, __FILE__, __FUNCTION__ , __LINE__))
 
-        /// 输出debug日志
-        /// @return 日志实例
-        static Logger &debug();
+/// info日志
+#define info() (cc::LoggerFactory::getLogger(cc::LogLevel::Info, __FILE__, __FUNCTION__ , __LINE__))
 
-        /// 判断是否开启info日志
-        /// @return 是否开启info日志
-        inline static bool isInfoEnabled() {
-            return info().isEnabled();
-        };
+/// warn警告日志
+#define warn() (cc::LoggerFactory::getLogger(cc::LogLevel::Warn, __FILE__, __FUNCTION__ , __LINE__))
 
-        /// 输出info日志
-        /// @return 日志实例
-        static Logger &info();
-
-        /// 判断是否开启警告日志
-        /// @return 是否开启警告日志
-        inline static bool isWarnEnabled() {
-            return warn().isEnabled();
-        }
-
-        /// 输出警告日志
-        /// @return 日志实例
-        static Logger &warn();
-
-        /// 判断是否开启错误日志
-        /// @return 是否开启错误日志
-        inline static bool isErrorEnabled() {
-            return error().isEnabled();
-        }
-
-        /// 输出错误日志
-        /// @return 日志实例
-        static Logger &error();
-    };
+/// error错误日志
+#define error() (cc::LoggerFactory::getLogger(cc::LogLevel::Error, __FILE__, __FUNCTION__ , __LINE__))
 }
-
 #endif

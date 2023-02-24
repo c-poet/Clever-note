@@ -21,19 +21,19 @@ cd::MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
     QTextDocument *doc = edit->document();
     connect(doc, &QTextDocument::blockCountChanged, [](int count) {
-        Log::info() << "blockCountChanged:" << count;
+        info()() << "blockCountChanged:" << count;
     });
     connect(doc, &QTextDocument::contentsChange, [](int form, int remove, int add) {
-        Log::info() << "contentsChange:" << form << "|" << remove << "|" << add;
+        info()() << "contentsChange:" << form << "|" << remove << "|" << add;
     });
     connect(doc, &QTextDocument::modificationChanged, [](bool status) {
-        Log::info() << "modificationChanged:" << status;
+        info()() << "modificationChanged:" << status;
     });
     connect(doc, &QTextDocument::cursorPositionChanged, [](const QTextCursor &cursor) {
-        Log::info() << "cursorPositionChanged:" << cursor.position();
+        info()() << "cursorPositionChanged:" << cursor.position();
     });
     connect(edit, &QTextEdit::cursorPositionChanged, [=]() {
-        Log::info() << "当前位置：" << edit->textCursor().position();
+        info()() << "当前位置：" << edit->textCursor().position();
     });
 }
 
