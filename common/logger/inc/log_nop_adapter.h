@@ -6,7 +6,7 @@
 namespace cc {
     /// 日志输出适配，无操作
     class LogNopAdapter : public LogAdapter {
-        void handle(const char *message) override {
+        void handle(const QString &message) override {
         }
     };
 }

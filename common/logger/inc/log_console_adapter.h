@@ -6,7 +6,7 @@
 namespace cc {
     /// 日志输出适配，输出至控制台
     class LogConsoleAdapter : public LogAdapter {
-        void handle(const char *message) override;
+        void handle(const QString &message) override;
     };
 }
 

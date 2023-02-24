@@ -2,6 +2,6 @@
 
 using namespace cc;
 
-void LogFileAdapter::handle(const char *message) {
+void LogFileAdapter::handle(const QString &message) {
 
 }

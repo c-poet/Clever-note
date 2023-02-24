@@ -7,6 +7,7 @@ using namespace cc;
 
 /// 日志测试
 void logTest() {
+    LogContext::getConfig().setLevel(LogLevel::Debug);
     LogContext::getConfig().setAdapter(new LogConsoleAdapter());
     debug() << "Hello World" << "\n";
     debug() << "Hello World" << "\n";
