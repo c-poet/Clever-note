@@ -10,26 +10,26 @@ namespace cc {
 
     /// 日志对象工厂
     class LoggerFactory {
-    private:
-        /// 日志对象指针
-        Logger **loggerArr = nullptr;
-
-        /// 校验日志实例是否已存在，不存在则实例化
-        /// @param level 日志等级
-        /// @return 日志对象实例
-        Logger *checkAndGetLogger(LogLevel level);
-
     public:
-        virtual ~LoggerFactory();
-
-        /// 获取默认的日志工厂实例
-        /// @return 日志工厂实例，全局单例
-        static LoggerFactory getInstance();
-
         /// 获取日志对象实例
         /// @param level 日志等级
         /// @return 日志对象实例
-        Logger &getLogger(LogLevel level);
+        static Logger &getLogger(LogLevel level);
+
+        /// 获取日志对象实例
+        /// @param level 日志等级
+        /// @param file 发生日志的文件
+        /// @param line 发生日志的行数
+        /// @return 日志对象实例
+        static Logger &getLogger(LogLevel level, const char *file, int line);
+
+        /// 获取日志对象实例
+        /// @param level 日志等级
+        /// @param file 发生日志的文件
+        /// @param func 发生日志的函数
+        /// @param line 发生日志的行数
+        /// @return 日志对象实例
+        static Logger &getLogger(LogLevel level, const char *file, const char *func, int line);
     };
 }
 
