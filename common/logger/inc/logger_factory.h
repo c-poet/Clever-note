@@ -15,13 +15,13 @@ namespace cc {
         static LoggerFactory INSTANCE;
 
         /// debug日志实例
-        Logger *debug;
+        Logger *_debug = nullptr;
         /// info日志实例
-        Logger *info;
+        Logger *_info = nullptr;
         /// warn日志实例
-        Logger *warn;
+        Logger *_warn = nullptr;
         /// error日志实例
-        Logger *error;
+        Logger *_error = nullptr;
 
         /// 校验及获取日志实例
         /// @param level 日志等级
@@ -29,6 +29,9 @@ namespace cc {
         Logger &getAndCheckLogger(LogLevel level);
 
     public:
+        /// 析构函数
+        virtual ~LoggerFactory();
+
         /// 获取日志工厂实例
         /// @return 日志工厂实例
         static LoggerFactory &getInstance();

@@ -11,16 +11,23 @@ LoggerFactory &LoggerFactory::getInstance() {
     return LoggerFactory::INSTANCE;
 }
 
+LoggerFactory::~LoggerFactory() {
+    delete this->_debug;
+    delete this->_info;
+    delete this->_warn;
+    delete this->_error;
+}
+
 Logger &LoggerFactory::getAndCheckLogger(LogLevel level) {
     switch (level) {
         case LogLevel::Debug:
-            return *(this->debug == nullptr ? (this->debug = new Logger(level)) : this->debug);
+            return *(this->_debug == nullptr ? (this->_debug = new Logger(level)) : this->_debug);
         case LogLevel::Info:
-            return *(this->info == nullptr ? (this->info = new Logger(level)) : this->info);
+            return *(this->_info == nullptr ? (this->_info = new Logger(level)) : this->_info);
         case LogLevel::Warn:
-            return *(this->warn == nullptr ? (this->warn = new Logger(level)) : this->warn);
+            return *(this->_warn == nullptr ? (this->_warn = new Logger(level)) : this->_warn);
         case LogLevel::Error:
-            return *(this->error == nullptr ? (this->error = new Logger(level)) : this->error);
+            return *(this->_error == nullptr ? (this->_error = new Logger(level)) : this->_error);
     }
 }
 
