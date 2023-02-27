@@ -5,7 +5,6 @@
 
 #include <QString>
 #include <QFileInfo>
-#include <QFile>
 #include <QDir>
 #include <QDateTime>
 #include "contrib/minizip/zip.h"
